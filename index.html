@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Tournament</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="heading"></div>
+
+    <!-- <div id="celebration" class="celebration"></div>
+    <div id="winnerBanner" class="winner-banner"></div> -->
+    <div id="celebration" class="celebration"></div>
+    <div id="winnerBanner" class="winner-banner"></div>
+    <div id="trophy" class="trophy hidden"></div>
+
+    <!-- Tournament Table -->
+    <div class="container1">
+        <table class="tournament-table">
+            <tr>
+                <th>Team</th>
+                <th>Wins</th>
+                <th>Draws</th>
+                <th>Losses</th>
+                <th>Goals</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td>Team A</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Team B</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <button id="view-standings">View Current Standings</button>
+    <hr>
+    <!-- Tournament Rounds Vertically -->
+    <div class="container">
+
+        <div class="team_selectbox">
+            <div class="team-image" id="left-team-image"></div>
+            <select class="team_select" id="leftteam" onchange="updateTeamImage(this, 'left-team-image')">              
+                <option value="" disabled selected>Select Team</option>
+                <option value="Brazil" data-image="images/teams/brazil.png">Brazil</option>
+                <option value="Argentina" data-image="images/teams/argentina.png">Argentina</option>
+                <option value="Portugal" data-image="images/teams/portugal.png">Portugal</option>
+                <option value="England" data-image="images/teams/england.png">England</option>
+                <option value="France" data-image="images/teams/france.png">France</option>
+                <option value="Germany" data-image="images/teams/germany.png">Germany</option>
+                <option value="Belgium" data-image="images/teams/belgium.png">Belgium</option>
+                <option value="Spain" data-image="images/teams/spain.png">Spain</option>
+                <option value="Croatia" data-image="images/teams/croatia.png">Croatia</option>
+                <option value="RealMadrid" data-image="images/teams/madrid.jpg">Real Madrid</option>
+                <option value="Barcelona" data-image="images/teams/Barcelona.jpeg">Barcelona</option>
+                <option value="ManUnited" data-image="images/teams/ManUnited.png">Man United</option>
+                <option value="ManCity" data-image="images/teams/Mancity.jpg">Man City</option>
+            </select>
+
+            <!-- Selected Players Box -->
+            <div class="selected-players">
+              <h3>Players:</h3>
+              <div class="player-displayleft"></div>
+            </div>
+              <!-- Dropdown for Selecting Players -->
+            <div class="dropdown-container">
+              <div class="dropdown-header" id="dropdownHeader-left">
+                <span>Select a Player</span>
+                <span class="dropdown-arrow" id="dropdownArrow-left">▼</span>
+              </div>
+              <div class="custom-dropdown" id="imageDropdown-left">
+                <div class="dropdownimg" data-img="images/cr7.jpg"><img src="images/cr7.jpg" alt="Cristiano Ronaldo"></div>
+                <div class="dropdownimg" data-img="images/messi.jpg"><img src="images/messi.jpg" alt="Lionel Messi"></div>
+                <div class="dropdownimg" data-img="images/ney.jpg"><img src="images/ney.jpg" alt="Neymar Jr."></div>
+                <div class="dropdownimg" data-img="images/modric.jpg"><img src="images/modric.jpg" alt="Luka Modric"></div>
+                <div class="dropdownimg" data-img="images/KDB.jpg"><img src="images/KDB.jpg" alt="Kevin D.Bruyne"></div>
+                <div class="dropdownimg" data-img="images/deligt.jpg"><img src="images/deligt.jpg" alt="M. De Ligt"></div>
+                <div class="dropdownimg" data-img="images/rodri.jpg"><img src="images/rodri.jpg" alt="Rodri"></div>
+                <div class="dropdownimg" data-img="images/dias.jpg"><img src="images/dias.jpg" alt="Ruben Dias"></div>
+                <div class="dropdownimg" data-img="images/carlos.jpg"><img src="images/carlos.jpg" alt="Roberto Carlos"></div>
+                <div class="dropdownimg" data-img="images/ramos.jpg"><img src="images/ramos.jpg" alt="Sergio Ramos"></div>
+                <div class="dropdownimg" data-img="images/courtois.jpg"><img src="images/courtois.jpg" alt="T. Courtois"></div>
+                <!-- Add more players here -->
+              </div>
+              
+            </div>
+        </div>
+
+        <div class="round-container">
+            <div class="round">
+                <div class="round-name">Final</div>
+                <div class="block">
+                    <div class="round_logo_left" id="final-left-logo">
+                    
+                    </div>
+                    <div class="left-team-name"></div>
+                    <div class="score-inputs">
+                        <div class="score" id="final-left-score"></div> - <div class="score" id="final-right-score"></div>
+                    </div>
+                    <div class="right-team-name"></div>
+                    <div class="round_logo_right" id="final-right-logo">
+    
+                    </div>
+                </div>
+                <div><button id="final-Overview">Overview</button></div>
+            </div>
+            <div class="round">
+                <div class="round-name">Semi-Final</div>
+                <div class="block">
+                    <div class="round_logo_left">
+    
+                    </div>
+                    <div class="left-team-name"></div>
+                    <div class="score-inputs">
+                        <div class="score" id="semi-left-score"></div> - <div class="score" id="semi-right-score"></div>
+                    </div>
+                    <div class="right-team-name"></div>
+                    <div class="round_logo_right">
+    
+                    </div>
+                </div>
+                <div><button id="semi-final-Overview">Overview</button></div>
+            </div>
+            <div class="round">
+                <div class="round-name">Round 3</div>
+                <div class="block">
+                    <div class="round_logo_left">
+    
+                    </div>
+                    <div class="left-team-name"></div>
+                    <div class="score-inputs">
+                        <div class="score" id="r3-left-score"></div> - <div class="score" id="r3-right-score"></div>
+                    </div>
+                    <div class="right-team-name"></div>
+                    <div class="round_logo_right">
+    
+                    </div>
+                </div>
+                <div><button id="r3-Overview">Overview</button></div>
+            </div>
+            <div class="round">
+                <div class="round-name">Round 2</div>
+                <div class="block">
+                    <div class="round_logo_left">
+    
+                    </div>
+                    <div class="left-team-name"></div>
+                    <div class="score-inputs">
+                        <div class="score" id="r2-left-score"></div> - <div class="score" id="r2-right-score"></div>
+                    </div>
+                    <div class="right-team-name"></div>
+                    <div class="round_logo_right">
+    
+                    </div>
+                </div>
+                <div><button id="r2-Overview">Overview</button></div>
+            </div>
+            <div class="round">
+                <div class="round-name">Round 1</div>
+                <div class="block">
+                    <div class="round_logo_left">
+                    
+                    </div>
+                    <div class="left-team-name"></div>
+                    <div class="score-inputs">
+                        <div class="score" id="r1-left-score"></div> - <div class="score" id="r1-right-score"></div>
+                    </div>
+                    <div class="right-team-name"></div>
+                    <div class="round_logo_right">
+    
+                    </div>
+                </div>
+                <div><button id="r1-Overview">Overview</button></div>
+            </div>
+        </div>
+
+        <div class="team_selectbox">
+            <div class="team-image" id="right-team-image"></div>
+            <select class="team_select" id="rightteam" onchange="updateTeamImage(this, 'right-team-image')">              
+                <option value="" disabled selected>Select Team</option>
+                <option value="Brazil" data-image="images/teams/brazil.png">Brazil</option>
+                <option value="Argentina" data-image="images/teams/argentina.png">Argentina</option>
+                <option value="Portugal" data-image="images/teams/portugal.png">Portugal</option>
+                <option value="England" data-image="images/teams/england.png">England</option>
+                <option value="France" data-image="images/teams/france.png">France</option>
+                <option value="Germany" data-image="images/teams/germany.png">Germany</option>
+                <option value="Belgium" data-image="images/teams/belgium.png">Belgium</option>
+                <option value="Spain" data-image="images/teams/spain.png">Spain</option>
+                <option value="Croatia" data-image="images/teams/croatia.png">Croatia</option>
+                <option value="RealMadrid" data-image="images/teams/madrid.jpg">Real Madrid</option>
+                <option value="Barcelona" data-image="images/teams/Barcelona.jpeg">Barcelona</option>
+                <option value="ManUnited" data-image="images/teams/ManUnited.png">ManUnited</option>
+                <option value="ManCity" data-image="images/teams/Mancity.jpg">Man City</option>
+            </select>
+
+            <!-- Selected Players Box -->
+            <div class="selected-players">
+                <h3>Players:</h3>
+                <div class="player-displayright"></div>
+            </div>
+              <!-- Dropdown for Selecting Players -->
+            <div class="dropdown-container">
+              <div class="dropdown-header" id="dropdownHeader-right">
+                <span>Select a Player</span>
+                <span class="dropdown-arrow" id="dropdownArrow-right">▼</span>
+              </div>
+              <div class="custom-dropdown" id="imageDropdown-right">
+                <div class="dropdownimg" data-img="images/ronaldo.jpg"><img src="images/ronaldo.jpg" alt="C. Ronaldo"></div>
+                <div class="dropdownimg" data-img="images/messi.jpg"><img src="images/messi.jpg" alt="Lionel Messi"></div>
+                <div class="dropdownimg" data-img="images/ney.jpg"><img src="images/ney.jpg" alt="Neymar Jr"></div>
+                <div class="dropdownimg" data-img="images/modric2.jpg"><img src="images/modric2.jpg" alt="Luka. Modric"></div>
+                <div class="dropdownimg" data-img="images/KDB.jpg"><img src="images/KDB.jpg" alt="Kevin D.Bruyne"></div>
+                <div class="dropdownimg" data-img="images/deligt.jpg"><img src="images/deligt.jpg" alt="M. De Ligt"></div>
+                <div class="dropdownimg" data-img="images/rodri.jpg"><img src="images/rodri.jpg" alt="Rodri"></div>
+                <div class="dropdownimg" data-img="images/carlos.jpg"><img src="images/carlos.jpg" alt="Roberto Carlos"></div>
+                <div class="dropdownimg" data-img="images/ramos.jpg"><img src="images/ramos.jpg" alt="Sergio Ramos"></div>
+                <div class="dropdownimg" data-img="images/mohd.jpg"><img src="images/mohd.jpg" alt="Mo. Salah"></div>
+                <div class="dropdownimg" data-img="images/stegen.jpg"><img src="images/stegen.jpg" alt="Ter Stegen"></div>
+                <div class="dropdownimg" data-img="images/trent.jpg"><img src="images/trent.jpg" alt="A. Trent"></div>
+                <div class="dropdownimg" data-img="images/costacurta.jpg"><img src="images/costacurta.jpg" alt="A. Costacurta"></div>
+                <div class="dropdownimg" data-img="images/jude.jpg"><img src="images/jude.jpg" alt="Bellinghum"></div>
+                <div class="dropdownimg" data-img="images/virgil.jpg"><img src="images/virgil.jpg" alt="Virgil V. Dijk"></div>
+                <div class="dropdownimg" data-img="images/mappe.jpg"><img src="images/mappe.jpg" alt="K. Mbappe"></div>
+                <div class="dropdownimg" data-img="images/rudiger.jpg"><img src="images/rudiger.jpg" alt="Rudiger"></div>
+                <div class="dropdownimg" data-img="images/dimaria.jpg"><img src="images/dimaria.jpg" alt="Di. Maria"></div>
+                <div class="dropdownimg" data-img="images/julian.jpg"><img src="images/julian.jpg" alt="J. Alvarez"></div>
+                <!-- Add more players here -->
+              </div>
+              
+            </div>
+        </div>
+    
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

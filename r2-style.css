@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f0f0;
+    text-align: center;
+    background-image: url(images/download.jpg);
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgb(29, 28, 28);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #f4f7f0;
+    height: 90px;
+    font-size: 3rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team {
+    width: 40%;
+    text-align: left;
+}
+
+.players {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    min-height: 50px;
+    background: #f9f9f9;
+}
+
+/* ................................................. */
+
+.round {
+    background: #fff;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    text-align: center;
+    background-image: url("blue3.jpg");
+}
+
+.block{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.round_logo_left,.round_logo_right{
+    display:inline-block;
+    height: 100px;
+    width: 120px;
+    border-radius: 8px;
+    border: 2px solid black;
+    margin: 10px 10px 0px 10px;
+    background-size: cover; /* Make sure the image covers the div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+}
+
+#left-team-name, #right-team-name{
+    height: 10%;
+    width: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 25pt;
+    color: #ffffff;
+}
+
+.score-inputs{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+}
+
+input{
+    width: 19%;
+    padding: 8px 0px 8px 35px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 8px 7px 7px 7px;
+    background-color: #f4f7f0;
+    font-size: 20pt;
+}
+ 
+#match-details{
+    display: flex;
+}
+
+#left{
+    display: inline;
+    width: 50%;
+    background-color: aqua;
+    margin: 15px;
+    margin-left: 10px;
+    margin-right: 90px;
+    border-radius: 9px;
+    padding-bottom: 10px;
+}
+
+#right{
+    display: inline;
+    width: 50%;
+    background-color: aqua;
+    margin: 15px;
+    margin-left: 80px;
+    margin-right: 10px;
+    border-radius: 9px;
+    padding-bottom: 10px;
+}
+
+.goal-entry1 input,
+.goal-entry1 select,
+.goal-entry2 input,
+.goal-entry2 select {
+  flex: 1;         /* Allow input and select to take up equal width */
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 11pt;
+  width: 30%;
+  margin-right: 1%;
+  margin-bottom: .5%;
+  margin-top: 0px;
+}
+
+#remove-goal1, #remove-goal2{
+    width: 30px;
+    padding: 6px;
+    background-color: rgb(208, 101, 51);
+}
+
+#TGA{
+    display: flex;
+    text-decoration:double;
+    margin: 10px 0px 0px 0px;
+    padding-left: 5px;
+    margin-right: 20px;
+}
+
+#motm{
+    margin:0px;
+    padding-left: 5px;
+    height: 10px;
+    border-radius: 5px;
+    align-self:center ;
+    justify-content:center;
+    align-items: center;
+    text-decoration:solid;
+    color: #f4f7f0;
+}
+
+button{
+    width: 37%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #0056b3;
+    color: #f4f7f0;
+    font-weight:500;
+}
+
+p{
+    width: 200px;
+    border-radius: 5px;
+    margin: 0px;
+}
+
+#motm-box{
+    border: 2px solid rgb(136, 133, 133) ;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  
+#man-of-the-match-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex; 
+    align-items: center;
+    
+}
+  
+#man-of-the-match {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12pt;
+}
+
+#rating{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rating-container{
+    display: inline;
+    width: 100%;
+    margin: 0px 10px 0px 10px;
+}
+
+#left-rating{
+    margin-right: 15%;
+}
+
+#right-rating{
+    margin-right: -20px;
+}
+
+.player-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 90%;
+    height: 40px;
+    margin-top: 1px;
+}
+
+.player-rating img {
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.player-rating input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color:#cbf6f6;
+}
+
+#save-button, #reset-button{
+    margin-top: 20px;
+}
+
+span{
+    width: 190px;
+    text-align: start;
+}

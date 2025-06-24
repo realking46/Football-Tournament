@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    background-image: url(images/gold2.jpg);
+}
+.container {
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #8f8e86;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+}
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    height: 350px;
+    background-image: url(images/ah2.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #0C0B0E;
+    background-position-x: 80%;
+    border-radius: 10px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 4.5rem;
+    color: #ffbf00;
+    display: flex;
+    align-items: center;
+    align-self:flex-end;
+    /* align-items: flex-end; */
+    align-content: center;
+    height: 350px;
+    width: 400px;
+    margin-left: 25%;
+    font-family: Calibri;
+}
+.award {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-left: 40px;
+    background-image: url(images/a4.jpg);
+    background-size: cover;
+    background-position-y: -210px;
+}
+.award:last-child {
+    border-bottom: none;
+}
+.award img {
+    max-width: 70px;
+    border-radius: 13px;
+    margin-right: 20px;
+}
+.award h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    width: 40%;
+    color: #12100a;
+}
+.award .points p {
+    margin: 0;
+    font-size: 1.3rem;
+    color:#acaf4c ;
+    margin-left: 95%;
+    left: 0px;
+    width: 190px;
+}
+
+#dor{
+  background-color: #545c54;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#ballonDOr{
+  display: block;
+  justify-items: center;
+  border-radius: 8px;
+  background-color: #1c254e;
+  background-image: url(images/a33.jpg);
+  background-size:cover;
+  background-position-y: -210px;
+  margin: 10px; 
+}
+
+#ballonDOr h2{
+    font-size: 5rem;
+    text-shadow:#ffb700;
+    color:gold ;
+}
+#ballonDOr img{
+    height: 170px;
+    max-width: 170px;
+    width: 180px;
+    padding-top: 20px;
+    border-radius: 37px;
+    margin: 0px;
+}
+#ballonDOr .points p{
+    margin: 0px;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+#runners{
+  border-radius: 10px;
+  background-color: #545c54;
+  margin: 5px;
+  margin-left: 50px;
+}
+
+#runnerUp1, #runnerUp2{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+#goldenBoot, #bestPlaymaker{
+  height: 120px;
+  background-color: #1c254e;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#goldenBoot img , #bestPlaymaker img{
+    max-width: 80px;
+} 
+
+.points .num {
+    font-size: 20px !important;
+    padding-left: 10px;
+    color: rgb(117, 206, 57) !important;
+}

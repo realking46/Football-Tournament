@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eFootball League</title>
+  <link rel="stylesheet" href="r3-style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Round-3</h1>
+
+    <div class="round">
+        <div class="block">
+            <div class="round_logo_left">
+            
+            </div>
+            <div id="left-team-name"></div>
+            <div class="score-inputs">
+                <input id="left-score" type="number" placeholder=" "> - <input id="right-score" type="number" placeholder=" ">
+            </div>
+            <div id="right-team-name"></div>
+            <div class="round_logo_right">
+
+            </div>
+        </div>
+    </div>
+    <div class="match-details" id="match-details">
+        <div id="left">
+            <!-- Goals Section -->
+            <!-- <div id="h3"><h3>Goals Record</h3></div> -->
+            <div id="TGA"><p>Time</p><p>Goals</p><p>Assists</p></div>
+            <hr>
+            <!-- <div id="TGA">Goals</div>
+            <div id="TGA">Assist</div> -->
+            <div id="goals-container1">
+              <div class="goal-entry1">
+                <!-- <input type="number" placeholder="Time (min)" class="goal-time">
+                <input type="text" placeholder="G - Goal Scorer" class="goal-scorer">
+                <input type="text" placeholder="A - Assist" class="goal-assist"> -->
+              </div>
+            </div>
+            <button id="add-goal1">+ Add Goal</button>
+            <button id="remove-goal1">~</button>
+        </div>
+        <div id="right">
+            <!-- Goals Section -->
+            <!-- <div id="h3"><h3>Goals Record</h3></div> -->
+            <div id="TGA"><p>Time</p><p>Goals</p><p>Assists</p></div>
+            <hr>
+            <!-- <div id="TGA">Goals</div>
+            <div id="TGA">Assist</div> -->
+            <div id="goals-container2">
+              <div class="goal-entry2">
+                <!-- <input type="number" placeholder="Time (min)" class="goal-time">
+                <input type="text" placeholder="G - Goal Scorer" class="goal-scorer">
+                <input type="text" placeholder="A - Assist" class="goal-assist"> -->
+              </div>
+            </div>
+            <button id="add-goal2">+ Add Goal</button>
+            <button id="remove-goal2">~</button>
+        </div>
+    </div>
+
+    <div id="motm-box">
+        <h3 id="motm">Man of the Match</h3>
+        <div id="man-of-the-match-container">
+          <select id="man-of-the-match">  
+            <option value="" disabled selected>Select Player</option>            
+          </select>
+          <img id="man-of-the-match-image" src="" alt="Player Image" style="width: 80px; height: 80px; margin-left: 10px; border-radius: 5px; display: none;">
+        </div>
+    </div>
+    
+    <div id="rating">
+      <div id="left-rating" class="rating-container"></div>
+      <div id="right-rating" class="rating-container"></div>
+    </div>
+
+    <button id="save-button">Save Match Data</button>
+    <button id="reset-button">Reset</button>
+
+</div>
+
+  <script src="r3-script.js"></script>
+</body>
+</html>

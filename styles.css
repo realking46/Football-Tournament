@@ -1,0 +1,529 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #3adeced3; */
+    background-image: url("back.jpeg");
+    background-position-y: 400px;
+    background-size: cover;
+}
+
+#heading{
+    height: 410px;
+    width: 100%;
+    background-image: url("images/heading.jpg") ;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+hr{
+    width: 100%;
+}
+
+h3{
+    margin: 5px;
+}
+
+.container {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    /* background-color: #cab394; */
+    background-image: url("back.jpeg");
+    background-size: cover;
+    border-radius: 15px;
+    justify-content: space-evenly;
+}
+
+.container1 {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    /* /* justify-content: center; */
+    flex-direction: column;
+    align-items: center; 
+}
+
+.tournament-table {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.tournament-table th, .tournament-table td {
+    border: 1px solid #b7b1b1;
+    padding: 8px;
+    text-align: center;
+}
+
+.tournament-table th {
+    background-color: #444;
+    color: white;
+}
+
+.round {
+    background: #fff;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-image: url("blue3.jpg");
+    width: 100%;
+}
+
+.round-container{
+    width: 54%;
+    margin-right: 55px;
+}
+
+.left-team-name, .right-team-name{
+    height: 5%;
+    width: 10%;
+    display: inline-flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 15pt;
+    color: #ffffff;
+}
+
+button {
+    padding: 8px 15px;
+    background: #6aa728;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+input{
+  width: 25%;
+  padding: 8px 0px 8px 35px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 8px 7px 7px 7px;
+  background-color: #f4f7f0;
+  font-size: 15pt;
+}
+
+.block{
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.image-options img {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.score-inputs{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+}
+
+.round_logo_left,.round_logo_right{
+    display:inline-block;
+    height: 60px;
+    width: 80px;
+    border-radius: 5px;
+    border: .5px solid black;
+    margin: 10px 0px 2px 0px;
+    background-size: cover; /* Make sure the image covers the div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+}
+
+.team_selectbox{
+    height: 200px;
+    width: 30%;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.team_select{
+  height: 40px;  
+  width: 58%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 11pt;
+  display: flex;
+  justify-self: center;
+}
+
+.team-image{
+    display:inline-block;
+    height: 130px;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid black;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 2px;
+    justify-self: center;
+}
+
+.score{
+  width: 37%;
+  height: 25px;
+  padding: 8px 0px 8px 0px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 8px 7px 7px 7px;
+  background-color: #f4f7f0;
+  font-size: 15pt;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.team-image img {
+    width: 100%;  /* Make image fill the container width */
+    height: 100%;  /* Make image fill the container height */
+    object-fit: cover;  /* Ensure the image covers the div without distortion */
+}
+
+.selected-players {
+    margin: 10px;
+    padding: 0px 10px 0px 10px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 60%;
+    left: 100px;
+    margin-left: 70px;
+    margin-right: 20px;
+}
+  
+.selected-players .player-displayleft {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* height: 10px;
+    width: 400px; */
+    margin-top: 2px;
+}
+
+.selected-players .player-displayleft img {
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    transition: border 0.3s;
+}
+
+.selected-players .player-displayleft img:hover {
+    border: 2px solid #333;
+}
+
+.selected-players .player-displayright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.selected-players .player-displayright img {
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    transition: border 0.3s;
+}
+
+.selected-players .player-displayright img:hover {
+    border: 2px solid #333;
+}
+
+.save-players{
+    margin-left: 14.75px;
+    margin-bottom: 10px;
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    width: 200px;
+    margin-left: 40px;
+
+}
+
+.dropdown-header:hover {
+    border-color: #aaa;
+}
+
+.dropdown-header span {
+    margin-right: 10px;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+    transform: rotate(180deg);
+}
+
+.custom-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    width: 250px;
+    z-index: 1000;
+    margin-left: 40px;
+    position: relative;
+    overflow: hidden; /* Ensures inner content doesn't overflow */
+    grid-template-columns: repeat(4, 1fr); /* 3 columns */
+    gap: 10px; /* Space between images */
+}
+
+.custom-dropdown div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-dropdown div:hover {
+    background-color: #f0f0f0;
+}
+
+.custom-dropdown img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.selected-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 100px;
+}
+
+.selected-box img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dropdownimg{
+    /* display: inline; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.custom-dropdown .dropdownimg img {
+  max-width: 100%; /* Ensures images don't exceed container size */
+  max-height: 50px; /* Optional: set a max height for uniformity */
+  border-radius: 10px; /* Optional: rounded corners for images */
+}
+.custom-dropdown .dropdownimg:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+/* Ensure the dropdown doesn't expand beyond its parent */
+.custom-dropdown {
+  max-height: 300px; /* Adjust to your preference */
+  overflow-y: auto; /* Adds scroll when content overflows vertically */
+}
+
+/* Optional: Add a hover effect for better UX */
+.custom-dropdown .dropdownimg:hover {
+  background-color: #f9f9f9;
+}
+
+/* Hide scrollbars (optional, for aesthetic purposes) */
+.custom-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-dropdown::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.scrollable-dropdown {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+.round-name{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 90px;
+    border-radius: 5px;
+    background-color: #cacbca;
+    color: #0f0f0e;
+}
+
+#view-standings{
+    width: 15%;
+    height: 10%;
+    font-size: 12pt;
+    margin-right: 20px;
+}
+  
+
+
+/* //........................................................................................................... */
+
+/* Celebration Container */
+.celebration {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    animation: fall 2s infinite ease-in-out;
+    border-radius: 2px;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Fireworks */
+.firework {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 45%;
+    animation: explode 1s infinite ease-in-out;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
+/* Winner Banner */
+.winner-banner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: rgb(251, 0, 0);
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.9);
+    z-index: 1001;
+    animation: glow 2s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3rem; /* Adjust the size as needed */
+    font-weight: bold; /* Make the text bold for better visibility */
+    background: linear-gradient(75deg, #f31212, #ed6d05, #fffb00, #00eaff, #01014b);
+    background-clip:unset;
+    -webkit-background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make the text color transparent so the background gradient is visible */
+    text-align: center; /* Optional: Align the text to center */
+    padding: 20px;
+    background-color: #fff; /* Background color of the div */
+    border: 20px solid transparent; /* Transparent border to allow the border image to show */
+    border-image: none; 
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(11, 148, 185, 0.7);
+    }
+    to {
+        text-shadow: 0 0 50px rgb(255, 234, 0);
+    }
+}
+
+.hidden {
+    display: none;
+}
